@@ -14,3 +14,6 @@ this is a list of leetcode solutions for the known [75 Blind problems](https://l
 - [3Sum](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/15-3sum)
 - [Container With Most Water](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/11-container-with-most-water)
 
+## Heap
+- [Merge k Sorted Lists](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/23-merge-k-sorted-lists)
+
