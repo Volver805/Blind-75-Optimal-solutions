@@ -1,4 +1,5 @@
 This is very similar to  [Maximum Subarray](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/53-maximum-subarray) I suggest you go back and solve that problem in case you didn't before attempting to solve this problem
+
 ---
 In this problem we need to keep an eye for one thing **Negative numbers as they will turn the greatest number into the smallest number but if a the smallest negative number is multipled by another negative number it'll result to the greatest number**
 ```
