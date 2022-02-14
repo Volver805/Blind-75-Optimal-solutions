@@ -1,7 +1,7 @@
 # Blind 75 Optimal solutions
 this is a list of leetcode solutions for the known [75 Blind problems](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
 
----
+
 ## Arrays
 - [Two Sum](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/1-two-sum)
 - [Best Time to Buy and Sell Stock](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/121-best-time-to-buy-and-sell-stock)
