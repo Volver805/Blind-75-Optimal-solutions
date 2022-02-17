@@ -16,4 +16,5 @@ this is a list of leetcode solutions for the known [75 Blind problems](https://l
 
 ## Heap
 - [Merge k Sorted Lists](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/23-merge-k-sorted-lists)
-
+- [Top K Frequent Elements](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/347-top-k-frequent-elements)
+- [Find Median From Data Stream](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/295-find-median-from-data-stream)
