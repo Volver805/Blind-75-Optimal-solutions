@@ -6,10 +6,22 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        lookUp = set()
-        while head:
-            if head in lookUp:
+        if not head:
+            return
+        slow = head
+        fast = head.next
+        while fast and fast.next:
+            if slow == fast:
                 return True
-            lookUp.add(head)
-            head = head.next
+            slow = slow.next
+            fast = fast.next.next
         return False
+        # Hash map solution
+        # lookUp = set()
+        # while head:
+        #     if head in lookUp:
+        #         return True
+        #     lookUp.add(head)
+        #     head = head.next
+        # return False
+        
