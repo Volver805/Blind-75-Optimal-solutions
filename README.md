@@ -14,6 +14,12 @@ this is a list of leetcode solutions for the known [75 Blind problems](https://l
 - [3Sum](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/15-3sum)
 - [Container With Most Water](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/11-container-with-most-water)
 
+## Linked List
+- [Reverse Linked List](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/206-reverse-linked-list)
+- [Linked List Cycle](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/141-linked-list-cycle)
+- [Remove Nth Node From End of List](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/19-remove-nth-node-from-end-of-list)
+- [Reorder List](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/143-reorder-list)
+
 ## Heap
 - [Merge k Sorted Lists](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/23-merge-k-sorted-lists)
 - [Top K Frequent Elements](https://github.com/Volver805/Blind-75-Optimal-solutions/tree/master/347-top-k-frequent-elements)
