@@ -1,14 +1,32 @@
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        intervals.sort()
-        r = 0
-        x = []
-        for interval in intervals:
-            if not x or x[-1][1] <= interval[0]:
-                x.append(interval)
+        if not intervals:
+            return 0
+        
+        """
+        Intuition:
+            Since we're minimizing number of intervals to remove,
+            it seems like we should try to remove longer running
+            intervals.
+            
+            All things considered, longer running intervals should
+            end later, right? So what if we take the intervals
+            which end earliest first!
+        """
+        
+        # sort intervals by finish time, ascending
+        intervals.sort(key=lambda x: x[1])
+        
+        # greedy strategy:
+        # accept every interval that isn't conflicting
+        # add up removals
+        end_so_far = intervals[0][1]
+        removed = 0
+        
+        for start, finish in intervals[1:]:
+            if start < end_so_far:
+                removed += 1
             else:
-                if interval[1] < x[-1][1]:
-                    x[-1] = interval
-                r += 1
-        return r
-    
+                end_so_far = finish
+            
+        return removed
