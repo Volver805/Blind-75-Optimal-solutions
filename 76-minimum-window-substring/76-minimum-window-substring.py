@@ -1,33 +1,23 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        res = None
-        left = 0
-        right = 0
-        characters = {}
+        window, target = {}, {}
+        left = right = 0
+        leftRes, rightRes, resLen = None,None,  math.inf
         for ch in t:
-            characters[ch] = characters.get(ch, 0) + 1
-        window = {}
-        while right < len(s):
-            window[s[right]] = window.get(s[right], 0) + 1
-            while self.matchTables(window, characters) and left < right:
-                if not res:
-                    res = s[left:right+1]
-                else:
-                    res = min([res, s[left:right+1]],key=len)
+            target[ch] = target.get(ch,0)+1
+        foundNum, targetNum = 0, len(target.keys())
+        for right in range(len(s)):
+            window[s[right]] = window.get(s[right], 0)+1
+            if s[right] in target and window[s[right]] == target[s[right]]:
+                foundNum += 1
+            while targetNum == foundNum:
+                if right-left+1 < resLen:
+                    leftRes, rightRes = left, right
+                    resLen = right-left+1
                 window[s[left]] -= 1
+                if s[left] in target and window[s[left]] < target[s[left]]:
+                    foundNum -= 1
                 left += 1
-            if self.matchTables(window, characters):
-                if not res:
-                    res = s[left:right+1]
-                else:
-                    res = min([res, s[left:right+1]],key=len)
-            right += 1
-        if not res:
+        if resLen == math.inf:
             return ""
-        return res
-            
-    def matchTables(self, window, target):
-        for ch in target.keys():
-            if  target[ch] > window.get(ch,0):
-                return False
-        return True
+        return s[leftRes:rightRes+1]
