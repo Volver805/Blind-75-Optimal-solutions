@@ -1,20 +1,14 @@
 class Solution:
     def characterReplacement(self, s: str, k: int):
-        mostFrequent = s[0]
         left = 0
-        right = 1
-        counter = {mostFrequent:1}
-        res = 1
-        while right < len(s):
-            if s[right] in counter:
-                counter[s[right]] += 1
-                if counter[s[right]] > counter[mostFrequent]:
-                    mostFrequent = s[right]
-            else:
-                counter[s[right]] = 1
-            if sum(counter.values())-counter[mostFrequent] > k:
-                res = max(res, right-left)
+        counter = {s[0]:1}
+        res = maxFreq = 1
+        for right in range(1, len(s)):
+            counter[s[right]] = counter.get(s[right], 0) + 1
+            maxFreq = max(maxFreq, counter[s[right]])
+            # to get the amount of characters to get replaced we will subtract the window size                   from the amount of the mos frequent number
+            while (right-left+1) - maxFreq > k:
                 counter[s[left]] -= 1
-                left += 1    
-            right += 1
-        return max(res, right-left) 
+                left += 1
+            max(res, right-left+1) 
+        return max(res, right-left+1) 
