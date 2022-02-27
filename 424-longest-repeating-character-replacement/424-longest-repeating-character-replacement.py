@@ -10,5 +10,4 @@ class Solution:
             while (right-left+1) - maxFreq > k:
                 counter[s[left]] -= 1
                 left += 1
-            max(res, right-left+1) 
         return max(res, right-left+1) 
