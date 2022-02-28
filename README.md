@@ -3,7 +3,7 @@ this is a list of leetcode solutions for the known [75 Blind problems](https://l
 **The main value of this repository are the notes for each(NOTES.md) problem, they'll provide you with the idea behind the problem**
 
 # In progress
-This repository is still in progress, feel free to contribute to make help finish it quicker, for code contributions please fork this repo and use [leathub](https://chrome.google.com/webstore/detail/leethub/aciombdipochlnkbpcbgdpjffcfdbggi?hl=en) to submit your code otherwise it won't be accepted, other types of solutions is adding notes, improving notes (Visualization, improve writing, adding more details/info), reviewing solutions (post an issue for any improvment/problem for the uploaded solutions).
+This repository is still in progress, feel free to contribute to help finish it quicker, for code contributions please fork this repo and use [leathub](https://chrome.google.com/webstore/detail/leethub/aciombdipochlnkbpcbgdpjffcfdbggi?hl=en) to submit your code otherwise it won't be accepted, other types of solutions is adding notes, improving notes (Visualization, improve writing, adding more details/info), reviewing solutions (post an issue for any improvment/problem for the uploaded solutions).
 - [ ] Add all problems solutions.
 - [ ] Add notes to all problems.
 - [ ] review that all solutions are optimal.
