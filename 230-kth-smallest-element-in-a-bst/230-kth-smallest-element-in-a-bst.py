@@ -6,13 +6,7 @@
 #         self.right = right
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        def iterateTree(node):
-            nonlocal h
-            if not node:
-                return
-            heapq.heappush(h, node.val)
-            iterateTree(node.left)
-            iterateTree(node.right)
-        h = []
-        iterateTree(root)
-        return heapq.nsmallest(k, h)[-1]
+        return self.iterate(root)[k-1]
+        
+    def iterate(self, node):
+        return self.iterate(node.left) + [node.val] + self.iterate(node.right) if node else []
