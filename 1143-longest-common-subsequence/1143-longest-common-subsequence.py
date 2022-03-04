@@ -1,10 +1,14 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        memo = {} # you can optimize space by using two pairs of pervious and current variables instead of hash table.
+        if len(text2) < len(text1):
+            text1, text2 = text2, text1
+        previous, current = [0]*(len(text1)+1), [0]*(len(text1)+1)
+        
         for j in reversed(range(len(text2))):
             for i in reversed(range(len(text1))):
                 if text1[i] == text2[j]:
-                    memo[(i, j)] = 1 + memo.get((i+1, j+1), 0)
+                    current[i] = 1+previous[i+1]
                 else:
-                    memo[(i, j)] = max(memo.get((i+1, j), 0), memo.get((i, j+1), 0))
-        return memo[(0, 0)]
+                    current[i] = max(current[i+1], previous[i])
+            current, previous = previous, current
+        return previous[0]
