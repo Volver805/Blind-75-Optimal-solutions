@@ -1,6 +1,6 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        memo = {}
+        memo = {} # you can optimize space by using two pairs of pervious and current variables instead of hash table.
         for j in reversed(range(len(text2))):
             for i in reversed(range(len(text1))):
                 if text1[i] == text2[j]:
