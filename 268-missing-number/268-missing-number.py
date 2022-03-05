@@ -9,6 +9,5 @@ class Solution:
 #       bit manipulation (optimal soultion)
         res = len(nums)
         for i, num in enumerate(nums):
-            print(bin(res))
             res ^= i ^ num
         return res
